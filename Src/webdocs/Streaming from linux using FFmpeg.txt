@@ -1,0 +1,39 @@
+https://www.reddit.com/r/Twitch/comments/323e4r/streaming_from_linux_using_ffmpeg_how_i_do_it/
+
+Streaming from linux using FFmpeg; how I do it.
+
+Guide
+
+I've spent a lot of time figuring out how to get this working right. Often the problems I had were asked elsewhere and either not answered, or answered poorly. I wanted to document this somewhere so that it might help anyone trying the same thing.
+
+So, I present my script for streaming to twitch. It is a modified form of a script found here: https://wiki.archlinux.org/index.php/Streaming_using_twitch.tv
+
+I am using Debian. It should work on other distros as well, but may require modifications. It will certainly have to be modified to suit your system and stream. The current values are very conservative so that it will work on my ancient laptop.
+
+ INRES="1280x800" # input resolution
+ OUTRES="1280" # output resolution horizontal. vertical is calculated. 
+ FPS="10" # target FPS
+ GOP="20" # i-frame interval, should be double of FPS, 
+ GOPMIN="10" # min i-frame interval, should be equal to fps, 
+ THREADS="2" # max 6
+ CBR="1000k" # constant bitrate (should be between 1000k - 3000k)
+ QUALITY="ultrafast"  # one of the many FFMPEG preset
+ AUDIO_SRATE="44100"
+ AUDIO_CHANNELS="1" #1 for mono output, 2 for stereo
+ AUDIO_ERATE="96k" #audio encoding rate
+ STREAM_KEY="live_*************" #your twitch stream key goes here
+ SERVER="live-dfw" #  http://bashtech.net/twitch/ingest.php for list
+
+ 
+ ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i :0.0 \
+-f alsa -i pulse -f alsa -i pulse \
+-f flv -filter_complex amix=inputs=2 -ac $AUDIO_CHANNELS -b:a $AUDIO_ERATE -ar $AUDIO_SRATE \
+   -vcodec libx264 -g $GOP -keyint_min $GOPMIN -b:v $CBR -minrate $CBR \
+-maxrate $CBR -vf "scale=$OUTRES:-1,format=yuv420p"\
+   -preset $QUALITY -acodec libmp3lame -threads $THREADS -strict normal \
+   -bufsize $CBR "rtmp://$SERVER.twitch.tv/app/$STREAM_KEY"
+Note that the line "-f alsa -i pulse -f alsa -i pulse" gives you two audio inputs, one for your desktop stereo monitor, and one for a mic. If you don't need both, just use a single "-f alsa -i pulse" and remove "-filter_complex amix=inputs=2"
+
+Use pavucontrol to set your input(s) and level(s)
+
+pressing q at the terminal will end the stream.

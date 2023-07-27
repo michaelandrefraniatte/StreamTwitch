@@ -1,0 +1,21 @@
+ffmpeg -f gdigrab -framerate 20 -thread_queue_size 512 -i desktop -f dshow -thread_queue_size 512 -i audio="@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{28B34400-BEE8-44F7-AFED-8B3D42294962}" -c:v libx264 -c:a aac -pix_fmt yuv420p -preset ultrafast -f flv "rtmp://live.justin.tv/app/live_636948694_wr10zViviLJw6z0sUGZ4Ngw5a1O3wm"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

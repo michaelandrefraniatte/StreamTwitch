@@ -1,0 +1,23 @@
+- Wire a jack helmet or jack speakers with volume selector, set it enable and set it default peripheral, and set HDMI enable and set it default communication peripheral, under play tab from sound properties
+- Set sound properties under record tab to stereo mixer enable and set it default peripheral, and check the box listen this peripheral, and in the list under, choose HDMI
+- Enable microphone and set it default communication peripheral, under record tab from sound properties, set jack helmet or jack speakers microphone on, under play tab from sound properties
+- Set game option listen helmet or speakers, HDMI output instead of RGB, 30 FPS
+- Allow applications to use microphone under privacy tab from parameters
+- Window title without accented characters for title="Window title" instead of desktop
+- File ffmpeg.exe from https://www.gyan.dev/ffmpeg/builds/ (don't use BtBN file, it lags too much your computer)
+- Command cmd.exe to have audio device list for find stereo mixer name : ffmpeg -list_devices true -f dshow -i dummy
+- Stream key twitch : https://dashboard.twitch.tv/u/michael113b/settings/channel
+- Stream key youtube : https://studio.youtube.com/channel/UCBRGE1JY7aBbh7Qe4_ugF3Q/livestreaming/dashboard
+- Launch cmd.exe and run command for debugging : golive
+- Use my StreamTwitch with good parameters in file : params.txt
+- Keyboard numpad decimal is used to start streaming and numpad 0 to stop it
+- It's possible to disable a maximum of services but not video and audio services
+- Distant port for outbound trafic to stream is 1935 in TCP for both twitch and youtube streams
+- Right-click Command Prompt and choose Run as administrator, in the Command Prompt, enter netstat -o -n and then press Enter, see IP of ffmpeg used for port 1935, and then check IP range with bgpview.io
+- Allow applications to access microphone from privacy settings under parameters
+- Reduce and disable sound qualities and features under sound properties
+- When using webcam overlay, it needs to switch between windowed to without border, to make appear overlay
+- Twitch recommended bitrate : https://help.twitch.tv/s/article/guide-to-broadcast-health-and-using-twitch-inspector
+- Youtube recommended bitrate : https://support.google.com/youtube/answer/1722171
+- It's possible to have a secure connection streaming on Youtube
+- Using Nvidia GPU and updating GPU is required

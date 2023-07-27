@@ -1,0 +1,1 @@
+-c:v h264_nvenc -preset medium -b:v BITRATE -bufsize BITRATE*2 -profile:v high -bf 3 -b_ref_mode 2 -temporal-aq 1 -rc-lookahead 20 -vsync 0

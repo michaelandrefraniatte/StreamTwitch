@@ -1,0 +1,21 @@
+ffmpeg -f gdigrab -framerate 30 -thread_queue_size 1024 -i title="Call of Duty®: Black Ops Cold War" -f dshow -thread_queue_size 1024 -i audio="@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{28B34400-BEE8-44F7-AFED-8B3D42294962}" -c:v libx264 -c:a aac -threads 8 -pix_fmt yuv420p -s 1280x720 -preset ultrafast -f flv "rtmp://live.justin.tv/app/live_636948694_wr10zViviLJw6z0sUGZ4Ngw5a1O3wm"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

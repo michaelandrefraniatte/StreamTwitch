@@ -1,0 +1,21 @@
+ffmpeg -f gdigrab -framerate 30 -thread_queue_size 1024 -i desktop -f dshow -thread_queue_size 1024 -i audio="@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{28B34400-BEE8-44F7-AFED-8B3D42294962}" -c:v libx264 -c:a aac -threads 8 -pix_fmt yuv420p -s 1280x720 -preset ultrafast -f flv "rtmp://a.rtmp.youtube.com/live2/634w-2rv7-hx56-3qhg-86ry"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

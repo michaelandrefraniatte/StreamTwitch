@@ -1,0 +1,1 @@
+-vf eq=gamma=-0.1:brightness=0.0:saturation=0.0:contrast=0.0

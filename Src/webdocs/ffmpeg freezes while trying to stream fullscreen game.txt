@@ -1,0 +1,25 @@
+https://www.reddit.com/r/ffmpeg/comments/bmw5n6/ffmpeg_freezes_while_trying_to_stream_fullscreen/
+
+ffmpeg freezes while trying to stream fullscreen game
+
+Hi,
+I am trying to consider using FFMpeg for streaming as I have a pretty low-end laptop and OBS will heat it up really quickly and badly. I tried to stream GTA V, and FFMpeg works just fine with windowed mode and windowed borderless mode, however once I switch to fullscreen, it just freezes at the first frame, but audio still works.
+
+This is the command I used:
+ffmpeg -f gdigrab -s 1280x720 -framerate 15 -i desktop -f dshow -i audio="Stereo Mix (Realtek High Definition Audio)" -c:v libx264 -preset fast -pix_fmt yuv420p -s 1280x720 -threads 0 -f flv %streamkey%
+Result: https://clips.twitch.tv/SmoggyIcyLegYouDontSay?tt_medium=clips_api&tt_content=url
+
+And then I tried to focus on the game window instead, but got similar results:
+Command: ffmpeg -f gdigrab -s 1280x720 -framerate 15 -i title="Grand Theft Auto V" -f dshow -i audio="Stereo Mix (Realtek High Definition Audio)" -c:v libx264 -preset fast -pix_fmt yuv420p -s 1280x720 -threads 0 -f flv %streamkey%
+Result: https://clips.twitch.tv/FantasticCooperativeHorseBudBlast?tt_medium=clips_api&tt_content=url
+
+My specs here in case it matters:
+Graphics: NVIDIA GeForce 210
+Processor: Intel Core i5-4460 @ 3.20GHz
+
+ffmpeg version 2.5.2
+
+My question: How do I fix it to not freeze after switching to full screen?
+
+Thanks,
+NRockhouse
