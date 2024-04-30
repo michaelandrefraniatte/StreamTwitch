@@ -29,3 +29,10 @@ C:\Users\micha\Documents\Perso\tool\ffmpeg-cmd-streaming\Src\CPU\StreamYoutube\S
 C:\Users\micha\Documents\Perso\tool\ffmpeg-cmd-streaming\Src\CPU\StreamYoutube\StreamYoutube\obj\Release\StreamYoutube.csproj.CoreCompileInputs.cache
 C:\Users\micha\Documents\Perso\tool\ffmpeg-cmd-streaming\Src\CPU\StreamYoutube\StreamYoutube\obj\Release\StreamYoutube.exe
 C:\Users\micha\Documents\Perso\tool\ffmpeg-cmd-streaming\Src\CPU\StreamYoutube\StreamYoutube\obj\Release\StreamYoutube.pdb
+C:\Users\micha\Documents\github\StreamTwitch\Src\CPU\StreamYoutube\StreamYoutube\bin\Release\StreamYoutube.exe.config
+C:\Users\micha\Documents\github\StreamTwitch\Src\CPU\StreamYoutube\StreamYoutube\bin\Release\StreamYoutube.exe
+C:\Users\micha\Documents\github\StreamTwitch\Src\CPU\StreamYoutube\StreamYoutube\bin\Release\StreamYoutube.pdb
+C:\Users\micha\Documents\github\StreamTwitch\Src\CPU\StreamYoutube\StreamYoutube\obj\Release\StreamYoutube.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\github\StreamTwitch\Src\CPU\StreamYoutube\StreamYoutube\obj\Release\StreamYoutube.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\github\StreamTwitch\Src\CPU\StreamYoutube\StreamYoutube\obj\Release\StreamYoutube.exe
+C:\Users\micha\Documents\github\StreamTwitch\Src\CPU\StreamYoutube\StreamYoutube\obj\Release\StreamYoutube.pdb
