@@ -7,4 +7,4 @@ rtmp://b.rtmp.youtube.com/live2/634w-2rv7-hx56-3qhg-86ry
 // buffer
 9500k
 // Enable EchoBoost
-True
+False
