@@ -1,6 +1,0 @@
-// audio device
-@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{B94C004A-E338-4D5E-875C-FE31CDFEE526}
-// stream url
-rtmp://b.rtmp.youtube.com/live2/634w-2rv7-hx56-3qhg-86ry
-// Enable EchoBoost
-False
